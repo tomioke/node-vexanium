@@ -7,8 +7,13 @@ echo "Starting Launch New Standby Node... \n";
 set -ex;
 ulimit -n 65535
 ulimit -s 64000
-mkdir -p $CONFIG_DIR
+
+if [ ! -d $CONFIG_DIR ]; then
+  mkdir -p $CONFIG_DIR;
+fi
+
 cp ./config.ini $CONFIG_DIR/config.ini
+
 pid=0;
 nodeos=$"nodeos \
  --config-dir $CONFIG_DIR \
