@@ -13,29 +13,31 @@ $ sudo apt install ./vex_1.7-4-ubuntu-18.04_amd64.deb
 Directory keosd:
 /usr/local/bin/keosd
 
-clivex --url https://databisnis.id wallet list
+List wallet active
+$ clivex --url https://databisnis.id wallet list
 
-clivex --url https://databisnis.id wallet create -n tomy_wallet --to-console
-Pass : PW5JyyCkH9z1n4PZfPa3xEhEue3s71p5bxgXEcLzy5N2F642amRkm
+Create New 
+$ clivex --url https://databisnis.id wallet create -n NAME_WALLET --to-console
+Pass : type_here
 
 Unlock wallet :
-clivex --url https://databisnis.id wallet unlock --password YOUR_PASSWORD
+$ clivex --url https://databisnis.id wallet unlock --password YOUR_PASSWORD
 
 Unlock wallet berdasarkan nama wallet:
-clivex --url https://databisnis.id wallet unlock -n tomy_wallet --password YOUR_PASSWORD
+$ clivex --url https://databisnis.id wallet unlock -n NAME_WALLET --password YOUR_PASSWORD
 
 Import akun dengan primary key
-clivex --url https://databisnis.id wallet import --private-key ADD_PRIMARY_KEY
+$ clivex --url https://databisnis.id wallet import --private-key ADD_PRIMARY_KEY
 
 Jika dengan nama wallet :
-clivex --url https://databisnis.id wallet import -n tomy_wallet --private-key ADD_PRIMARY_KEY
+$ clivex --url https://databisnis.id wallet import -n NAME_WALLET --private-key ADD_PRIMARY_KEY
 
 List wallet yang berhasil di import berdasarkan private key 
-clivex --url https://databisnis.id wallet keys
+$ clivex --url https://databisnis.id wallet keys
 
 Tampilkan nama akun berdasarkan public key
-clivex --url https://databisnis.id get accounts YOUR_PUBLIC_KEYS
+$ clivex --url https://databisnis.id get accounts YOUR_PUBLIC_KEYS
 
 Mengunci semua wallet yang aktif
-clivex --url https://databisnis.id wallet lock_all
+$ clivex --url https://databisnis.id wallet lock_all
 
