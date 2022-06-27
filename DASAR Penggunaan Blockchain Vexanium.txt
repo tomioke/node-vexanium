@@ -1,0 +1,41 @@
+Install vexanium dependency di Ubuntu 18.04
+
+Login sebagai root
+
+$ sudo -i
+$ mkdir vexanium
+$ cd vexanium
+
+Download vexanium deb
+$ wget https://github.com/vexanium/vexnodeclivex/releases/download/v1.7.4-1/vex_1.7-4-ubuntu-18.04_amd64.deb 
+$ sudo apt install ./vex_1.7-4-ubuntu-18.04_amd64.deb
+
+Directory keosd:
+/usr/local/bin/keosd
+
+clivex --url https://databisnis.id wallet list
+
+clivex --url https://databisnis.id wallet create -n tomy_wallet --to-console
+Pass : PW5JyyCkH9z1n4PZfPa3xEhEue3s71p5bxgXEcLzy5N2F642amRkm
+
+Unlock wallet :
+clivex --url https://databisnis.id wallet unlock --password YOUR_PASSWORD
+
+Unlock wallet berdasarkan nama wallet:
+clivex --url https://databisnis.id wallet unlock -n tomy_wallet --password YOUR_PASSWORD
+
+Import akun dengan primary key
+clivex --url https://databisnis.id wallet import --private-key ADD_PRIMARY_KEY
+
+Jika dengan nama wallet :
+clivex --url https://databisnis.id wallet import -n tomy_wallet --private-key ADD_PRIMARY_KEY
+
+List wallet yang berhasil di import berdasarkan private key 
+clivex --url https://databisnis.id wallet keys
+
+Tampilkan nama akun berdasarkan public key
+clivex --url https://databisnis.id get accounts YOUR_PUBLIC_KEYS
+
+Mengunci semua wallet yang aktif
+clivex --url https://databisnis.id wallet lock_all
+
